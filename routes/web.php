@@ -11,6 +11,7 @@
 |
  */
 
+Auth::routes();
 
 Route::group(['middleware' => 'home'], function(){
     Route::get('/', 'HomeController@getLogin')->name('home.login');

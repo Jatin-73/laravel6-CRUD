@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
+
+//API Routes//
+
 Route::post('register', 'UserController@Register');
 Route::post('verifyotp/{id}', 'UserController@Verifyotp');
 
