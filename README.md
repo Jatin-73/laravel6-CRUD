@@ -78,3 +78,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # laravel6-CRUD
 # laravel6-CRUD
+
+migrate Specific migration file laravel
+php artisan migrate --path='./database/migrations/filename.php'
