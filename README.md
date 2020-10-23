@@ -80,3 +80,19 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 migrate Specific migration file laravel<br>
 php artisan migrate --path='./database/migrations/filename.php'
+
+----------------------------------------------------------------------------------------------------------------
+join query to fetch sigle row laravel
+----------------------------------------------------------------------------------------------------------------
+$gymList = DB::table('gym_users')
+			->join('gym_category', 'gym_users.gym_category', '=', 'gym_category.id')
+			->select('gym_users.*', 'gym_users.id as primary_id', 'gym_category.id as catid', 'gym_category.*')
+			->where('gym_users.id', '=', $request->id)
+			->first();
+----------------------------------------------------------------------------------------------------------------
+join query
+----------------------------------------------------------------------------------------------------------------
+$gymList = DB::table('gym_users')
+			->join('gym_category', 'gym_users.gym_category', '=', 'gym_category.id')
+			->select('gym_users.*', 'gym_users.id as primary_id', 'gym_category.id as catid', 'gym_category.*')
+			->get();
